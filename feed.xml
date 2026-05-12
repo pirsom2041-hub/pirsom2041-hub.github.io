@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>TipMaster — Football Tips</title>
+    <link>https://your-site.github.io</link>
+    <description>המלצות כדורגל מקצועיות מבוססות AI</description>
+    <language>he</language>
+    <lastBuildDate>Tue, 12 May 2026 00:03:52 +0000</lastBuildDate>
+  <item>
+    <title>TipMaster — 2026-05-12</title>
+    <link>https://your-site.github.io/posts/2026-05-12.html</link>
+    <description>המלצות סוף שבוע: מנצ'סטר סיטי מובילה את הדרך, לצד משחקים עם פוטנציאל לשערים.</description>
+    <pubDate>2026-05-12</pubDate>
+    <guid>https://your-site.github.io/posts/2026-05-12.html</guid>
+  </item>
+  <item>
+    <title>TipMaster — 2026-05-11</title>
+    <link>https://your-site.github.io/posts/2026-05-11.html</link>
+    <description>הלילה בליגה הספרדית, קרב בין ענקים לבין מפגש צמוד במיוחד. אנחנו מפרקים את שלושת המשחקים עם ניתוח מפורט והמלצות מבוססות נתונים שיעזרו לכם להרוויח, ולו קצת.</description>
+    <pubDate>2026-05-11</pubDate>
+    <guid>https://your-site.github.io/posts/2026-05-11.html</guid>
+  </item>
+  <item>
+    <title>TipMaster — 2026-05-10</title>
+    <link>https://your-site.github.io/posts/2026-05-10.html</link>
+    <description>הלילה מתפרץ על המגרשים עם שלושה משחקים מרתקים ממסות ליגות שונות. מטרתנו היא לספק לכם את ההמלצות הטובות ביותר כדי להפוך את ההימורים שלכם לרווחיים יותר. נצטרך להתבסס על נתונים וניתוח מעמיק כדי להגיע למסקנות מדויקות.</description>
+    <pubDate>2026-05-10</pubDate>
+    <guid>https://your-site.github.io/posts/2026-05-10.html</guid>
+  </item>
+  </channel>
+</rss>
