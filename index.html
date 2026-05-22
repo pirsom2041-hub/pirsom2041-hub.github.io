@@ -27,19 +27,19 @@
 
 <div class="stats-bar">
   <div class="stat-item">
-    <span class="stat-value">0</span>
+    <span class="stat-value">7</span>
     <span class="stat-label">✅ טיפים נכונים</span>
   </div>
   <div class="stat-item">
-    <span class="stat-value">0</span>
+    <span class="stat-value">10</span>
     <span class="stat-label">❌ טיפים שגויים</span>
   </div>
   <div class="stat-item">
-    <span class="stat-value">0%</span>
+    <span class="stat-value">41.2%</span>
     <span class="stat-label">🎯 דיוק (כל הזמן)</span>
   </div>
   <div class="stat-item">
-    <span class="stat-value">6</span>
+    <span class="stat-value">7</span>
     <span class="stat-label">📅 ימי פרסום</span>
   </div>
   
@@ -52,43 +52,125 @@
     <div class="dash-card">
       <div class="dash-period">30 יום אחרון</div>
       <div class="dash-acc red">
-        —
+        41.2%
       </div>
-      <div class="dash-total">19 picks</div>
+      <div class="dash-total">24 picks</div>
     </div>
     <div class="dash-card">
       <div class="dash-period">90 יום אחרון</div>
       <div class="dash-acc red">
-        —
+        41.2%
       </div>
-      <div class="dash-total">19 picks</div>
+      <div class="dash-total">24 picks</div>
     </div>
     <div class="dash-card">
       <div class="dash-period">כל הזמן</div>
       <div class="dash-acc red">
-        —
+        41.2%
       </div>
-      <div class="dash-total">19 picks</div>
+      <div class="dash-total">24 picks</div>
     </div>
   </div>
 
   
 
-  <p class="dash-updated">עדכון אחרון: 2026-05-17 17:47</p>
+  <p class="dash-updated">עדכון אחרון: 2026-05-22 15:56</p>
 </section>
 
 
 <main class="container">
 
   
+  <section class="simulator-section">
+    <h2>📈 סימולטור בנקרול</h2>
+    <p class="sim-subtitle">אם היית מתחיל עם <strong>1,000₪</strong> ועקבת אחרינו (1u = 1% בנקרול)</p>
+    <canvas id="bankrollChart" height="90"></canvas>
+    <script>
+    (function() {
+      const results = [
+        
+        { wins: 0, losses: 5, date: "2026-05-10" },
+        
+        { wins: 3, losses: 2, date: "2026-05-11" },
+        
+        { wins: 1, losses: 2, date: "2026-05-12" },
+        
+        { wins: 2, losses: 0, date: "2026-05-13" },
+        
+        { wins: 0, losses: 1, date: "2026-05-14" },
+        
+        { wins: 1, losses: 0, date: "2026-05-17" },
+        
+        { wins: 0, losses: 0, date: "2026-05-22" }
+        
+      ];
+      let bankroll = 1000;
+      const labels = [];
+      const data = [bankroll];
+      results.forEach(r => {
+        const unit = bankroll * 0.01;
+        bankroll += r.wins * unit;
+        bankroll -= r.losses * unit;
+        labels.push(r.date.slice(5));
+        data.push(Math.round(bankroll));
+      });
+      const ctx = document.getElementById('bankrollChart').getContext('2d');
+      const gradient = ctx.createLinearGradient(0, 0, 0, 200);
+      gradient.addColorStop(0, 'rgba(34,197,94,0.35)');
+      gradient.addColorStop(1, 'rgba(34,197,94,0.02)');
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['התחלה', ...labels],
+          datasets: [{
+            label: 'בנקרול (₪)',
+            data: data,
+            borderColor: '#22c55e',
+            backgroundColor: gradient,
+            tension: 0.3,
+            pointRadius: 3,
+            pointBackgroundColor: '#22c55e',
+            fill: true,
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: { label: ctx => `₪${ctx.raw.toLocaleString()}` }
+            }
+          },
+          scales: {
+            x: { ticks: { color: '#94a3b8', maxTicksLimit: 10 }, grid: { color: '#1e293b' } },
+            y: {
+              ticks: { color: '#94a3b8', callback: v => '₪' + v.toLocaleString() },
+              grid: { color: '#1e293b' }
+            }
+          }
+        }
+      });
+    })();
+    </script>
+  </section>
+  
 
   <section class="posts-section">
     <h2>טיפים אחרונים</h2>
     
+    <a href="posts/2026-05-22.html" class="post-preview">
+      <span class="preview-date">2026-05-22</span>
+      <span class="preview-results">
+        <span class="preview-wins">✅ 0</span>
+        <span class="preview-losses">❌ 0</span>
+      </span>
+      <span class="preview-intro">היום אנו מתמקדים בסרייה א&#39; ובלה ליגה, עם דגש על כוחן של הקבוצות המובילות.</span>
+    </a>
+    
     <a href="posts/2026-05-17.html" class="post-preview">
       <span class="preview-date">2026-05-17</span>
       <span class="preview-results">
-        <span class="preview-wins">✅ 0</span>
+        <span class="preview-wins">✅ 1</span>
         <span class="preview-losses">❌ 0</span>
       </span>
       <span class="preview-intro">היום אנו מתמקדים במשחק אחד בליגה האנגלית, בו ארסנל מארחת את ברנלי.</span>
@@ -98,7 +180,7 @@
       <span class="preview-date">2026-05-14</span>
       <span class="preview-results">
         <span class="preview-wins">✅ 0</span>
-        <span class="preview-losses">❌ 0</span>
+        <span class="preview-losses">❌ 1</span>
       </span>
       <span class="preview-intro">המלצות ממוקדות למשחקי הליגה הבכירה.</span>
     </a>
@@ -106,7 +188,7 @@
     <a href="posts/2026-05-13.html" class="post-preview">
       <span class="preview-date">2026-05-13</span>
       <span class="preview-results">
-        <span class="preview-wins">✅ 0</span>
+        <span class="preview-wins">✅ 2</span>
         <span class="preview-losses">❌ 0</span>
       </span>
       <span class="preview-intro">היום בליגה הספרדית: קרבות צמרת ומשחקים מכריעים.</span>
@@ -115,17 +197,17 @@
     <a href="posts/2026-05-12.html" class="post-preview">
       <span class="preview-date">2026-05-12</span>
       <span class="preview-results">
-        <span class="preview-wins">✅ 0</span>
-        <span class="preview-losses">❌ 0</span>
+        <span class="preview-wins">✅ 1</span>
+        <span class="preview-losses">❌ 2</span>
       </span>
-      <span class="preview-intro">המלצות סוף שבוע: מנצ'סטר סיטי מובילה את הדרך, לצד משחקים עם פוטנציאל לשערים.</span>
+      <span class="preview-intro">המלצות סוף שבוע: מנצ&#39;סטר סיטי מובילה את הדרך, לצד משחקים עם פוטנציאל לשערים.</span>
     </a>
     
     <a href="posts/2026-05-11.html" class="post-preview">
       <span class="preview-date">2026-05-11</span>
       <span class="preview-results">
-        <span class="preview-wins">✅ 0</span>
-        <span class="preview-losses">❌ 0</span>
+        <span class="preview-wins">✅ 3</span>
+        <span class="preview-losses">❌ 2</span>
       </span>
       <span class="preview-intro">הלילה בליגה הספרדית, קרב בין ענקים לבין מפגש צמוד במיוחד. אנחנו מפרקים את שלושת המשחקים עם</span>
     </a>
@@ -134,7 +216,7 @@
       <span class="preview-date">2026-05-10</span>
       <span class="preview-results">
         <span class="preview-wins">✅ 0</span>
-        <span class="preview-losses">❌ 0</span>
+        <span class="preview-losses">❌ 5</span>
       </span>
       <span class="preview-intro">הלילה מתפרץ על המגרשים עם שלושה משחקים מרתקים ממסות ליגות שונות. מטרתנו היא לספק לכם את הה</span>
     </a>
