@@ -27,19 +27,19 @@
 
 <div class="stats-bar">
   <div class="stat-item">
-    <span class="stat-value">79</span>
+    <span class="stat-value">81</span>
     <span class="stat-label">✅ טיפים נכונים</span>
   </div>
   <div class="stat-item">
-    <span class="stat-value">29</span>
+    <span class="stat-value">34</span>
     <span class="stat-label">❌ טיפים שגויים</span>
   </div>
   <div class="stat-item">
-    <span class="stat-value">73.1%</span>
+    <span class="stat-value">70.4%</span>
     <span class="stat-label">🎯 דיוק (כל הזמן)</span>
   </div>
   <div class="stat-item">
-    <span class="stat-value">46</span>
+    <span class="stat-value">47</span>
     <span class="stat-label">📅 ימי פרסום</span>
   </div>
   
@@ -51,35 +51,43 @@
 </div>
 
 
+<div class="community-cta" style="margin:18px auto 0;max-width:720px;padding:22px 24px;border-radius:16px;background:linear-gradient(135deg,#0b1220,#132033);text-align:center">
+  <p style="font-size:1.2rem;font-weight:800;margin:0 0 6px">💬 המספרים האלה מתועדים מראש — והטיפ הבא מחכה בקבוצה</p>
+  <p style="opacity:.85;margin:0 0 14px">ניתוח יומי על כל משחק, תחרויות ניחוש ופרסים — בחינם, בקהילת TipMaster בטלגרם.</p>
+  <a href="https://t.me/Tipmasterbot10bot?start=src_website" rel="noopener" style="display:inline-block;padding:12px 30px;border-radius:999px;background:#C6F24E;color:#0b1220;font-weight:800;text-decoration:none">להצטרפות לקבוצה ←</a>
+</div>
+
+
+
 <section class="dashboard-section container">
   <h2>📊 לוח ביצועים</h2>
   <div class="dashboard-grid">
     <div class="dash-card">
       <div class="dash-period">30 יום אחרון</div>
       <div class="dash-acc green">
-        73.9%
+        62.9%
       </div>
-      <div class="dash-total">57 picks</div>
+      <div class="dash-total">43 picks</div>
     </div>
     <div class="dash-card">
       <div class="dash-period">90 יום אחרון</div>
       <div class="dash-acc green">
-        73.1%
+        70.4%
       </div>
-      <div class="dash-total">125 picks</div>
+      <div class="dash-total">129 picks</div>
     </div>
     <div class="dash-card">
       <div class="dash-period">כל הזמן</div>
       <div class="dash-acc green">
-        73.1%
+        70.4%
       </div>
-      <div class="dash-total">125 picks</div>
+      <div class="dash-total">129 picks</div>
     </div>
   </div>
 
   
 
-  <p class="dash-updated">עדכון אחרון: 2026-07-29 10:30</p>
+  <p class="dash-updated">עדכון אחרון: 2026-08-06 10:30</p>
 </section>
 
 
@@ -180,11 +188,13 @@
         
         { wins: 1, losses: 0, date: "2026-07-25" },
         
-        { wins: 0, losses: 0, date: "2026-07-27" },
+        { wins: 0, losses: 1, date: "2026-07-27" },
         
-        { wins: 0, losses: 0, date: "2026-07-28" },
+        { wins: 2, losses: 2, date: "2026-07-28" },
         
-        { wins: 0, losses: 0, date: "2026-07-29" }
+        { wins: 0, losses: 2, date: "2026-07-29" },
+        
+        { wins: 0, losses: 0, date: "2026-08-06" }
         
       ];
       let bankroll = 1000;
@@ -241,11 +251,20 @@
   <section class="posts-section">
     <h2>טיפים אחרונים</h2>
     
+    <a href="posts/2026-08-06.html" class="post-preview">
+      <span class="preview-date">2026-08-06</span>
+      <span class="preview-results">
+        <span class="preview-wins">✅ 0</span>
+        <span class="preview-losses">❌ 0</span>
+      </span>
+      <span class="preview-intro">הנה ההמלצות שלנו למשחקים היום!</span>
+    </a>
+    
     <a href="posts/2026-07-29.html" class="post-preview">
       <span class="preview-date">2026-07-29</span>
       <span class="preview-results">
         <span class="preview-wins">✅ 0</span>
-        <span class="preview-losses">❌ 0</span>
+        <span class="preview-losses">❌ 2</span>
       </span>
       <span class="preview-intro">הנה ההמלצות שלנו למשחקים הקרובים!</span>
     </a>
@@ -253,8 +272,8 @@
     <a href="posts/2026-07-28.html" class="post-preview">
       <span class="preview-date">2026-07-28</span>
       <span class="preview-results">
-        <span class="preview-wins">✅ 0</span>
-        <span class="preview-losses">❌ 0</span>
+        <span class="preview-wins">✅ 2</span>
+        <span class="preview-losses">❌ 2</span>
       </span>
       <span class="preview-intro">הנה ההמלצות שלנו למשחקים המרכזיים הלילה!</span>
     </a>
@@ -263,7 +282,7 @@
       <span class="preview-date">2026-07-27</span>
       <span class="preview-results">
         <span class="preview-wins">✅ 0</span>
-        <span class="preview-losses">❌ 0</span>
+        <span class="preview-losses">❌ 1</span>
       </span>
       <span class="preview-intro">הנה ההמלצות שלנו למשחקי היום!</span>
     </a>
@@ -665,7 +684,8 @@
   <p style="margin-top:.8rem;font-size:.85rem;">
     <a href="privacy.html">מדיניות פרטיות</a> ·
     <a href="terms.html">תנאי שימוש</a> ·
-    <a href="https://t.me/tipmaster_il">ערוץ הטלגרם</a>
+    <a href="https://t.me/tipmaster_il">ערוץ הטלגרם</a> ·
+    <a href="https://t.me/Tipmasterbot10bot?start=src_website">💬 הקבוצה</a>
   </p>
 </footer>
 
